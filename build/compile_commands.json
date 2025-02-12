@@ -1,7 +1,12 @@
 [
 {
   "directory": "/workspaces/cpp/build",
-  "command": "/usr/bin/g++ -g -o CMakeFiles/hello_world.dir/src/main.cpp.o -c /workspaces/cpp/src/main.cpp",
-  "file": "/workspaces/cpp/src/main.cpp"
+  "command": "/usr/bin/c++    -o CMakeFiles/main.dir/src/main.cc.o -c /workspaces/cpp/src/main.cc",
+  "file": "/workspaces/cpp/src/main.cc"
+},
+{
+  "directory": "/workspaces/cpp/build",
+  "command": "/usr/bin/c++    -o CMakeFiles/main.dir/src/Logger.cc.o -c /workspaces/cpp/src/Logger.cc",
+  "file": "/workspaces/cpp/src/Logger.cc"
 }
 ]

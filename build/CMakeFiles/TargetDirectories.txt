@@ -1,3 +1,3 @@
 /workspaces/cpp/build/CMakeFiles/rebuild_cache.dir
 /workspaces/cpp/build/CMakeFiles/edit_cache.dir
-/workspaces/cpp/build/CMakeFiles/hello_world.dir
+/workspaces/cpp/build/CMakeFiles/main.dir

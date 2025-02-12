@@ -130,44 +130,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named hello_world
+# Target rules for targets named main
 
 # Build rule for target.
-hello_world: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello_world
-.PHONY : hello_world
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-hello_world/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/build
-.PHONY : hello_world/fast
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
-src/main.o: src/main.cpp.o
+src/Logger.o: src/Logger.cc.o
+
+.PHONY : src/Logger.o
+
+# target to build an object file
+src/Logger.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Logger.cc.o
+.PHONY : src/Logger.cc.o
+
+src/Logger.i: src/Logger.cc.i
+
+.PHONY : src/Logger.i
+
+# target to preprocess a source file
+src/Logger.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Logger.cc.i
+.PHONY : src/Logger.cc.i
+
+src/Logger.s: src/Logger.cc.s
+
+.PHONY : src/Logger.s
+
+# target to generate assembly for a file
+src/Logger.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Logger.cc.s
+.PHONY : src/Logger.cc.s
+
+src/main.o: src/main.cc.o
 
 .PHONY : src/main.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/main.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cc.o
+.PHONY : src/main.cc.o
 
-src/main.i: src/main.cpp.i
+src/main.i: src/main.cc.i
 
 .PHONY : src/main.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cc.i
+.PHONY : src/main.cc.i
 
-src/main.s: src/main.cpp.s
+src/main.s: src/main.cc.s
 
 .PHONY : src/main.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cc.s
+.PHONY : src/main.cc.s
 
 # Help Target
 help:
@@ -177,7 +204,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... hello_world"
+	@echo "... main"
+	@echo "... src/Logger.o"
+	@echo "... src/Logger.i"
+	@echo "... src/Logger.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
