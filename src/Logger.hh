@@ -3,4 +3,10 @@
 #include <string>
 
 // Logt een bericht als ENABLE_LOGGING is gedefinieerd.
-void log(const std::string &message);
+template <typename... Args>
+void log(Args... args)
+{
+    #ifdef ENABLE_LOGGING
+    (std::cout << ... << args) << "\n";
+    #endif
+}

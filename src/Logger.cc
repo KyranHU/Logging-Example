@@ -1,8 +1,4 @@
-#include "Logger.h"
+#include "Logger.hh"
 #include <iostream>
 
-void log(const std::string &message){
-    #ifdef ENABLE_LOGGING
-    std::cout << message << "\n";
-    #endif
-}
+// Alles wordt in de header gedefinieerd, dus hier hoeft niets te gebeuren.
